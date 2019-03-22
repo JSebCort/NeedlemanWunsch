@@ -4,6 +4,32 @@ You can use the [editor on GitHub](https://github.com/JSebCort/NeedlemanWunsch/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+## Group Members & Their Roles
+
+## Project Manager – Christopher Brown 
+
+Animal body part they would want: 
+
+## Researcher – Andrew March
+
+Animal body part they would want: Elephant Trunk
+
+## Quality Assurance Specialist – Jennifer Mince 
+
+Eagle Wings
+
+## Developer – Edmund Sherman
+
+Octopus Tentacles
+
+## Technical Writer – Sebastian Cortes
+
+blerg
+
+## GUI Developer – Whitney Trovinger
+
+Fish Tail
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
