@@ -8,27 +8,27 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ## Project Manager – Christopher Brown 
 
-Animal body part they would want: 
+Animal body part they would want: Bat ears
 
 ## Researcher – Andrew March
 
-Animal body part they would want: Elephant Trunk
+Animal body part they would want: Elephant trunk
 
 ## Quality Assurance Specialist – Jennifer Mince 
 
-Eagle Wings
+Animal body part they would want: Eagle wings
 
 ## Developer – Edmund Sherman
 
-Octopus Tentacles
+Animal body part they would want: Octopus tentacles
 
 ## Technical Writer – Sebastian Cortes
 
-blerg
+Animal body part they would want: Crab claws
 
 ## GUI Developer – Whitney Trovinger
 
-Fish Tail
+Animal body part they would want: Fish tail
 
 ### Markdown
 
