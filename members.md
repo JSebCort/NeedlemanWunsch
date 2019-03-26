@@ -31,4 +31,4 @@ Animal body part they would want: Crab claws
 Animal body part they would want: Fish tail
 
 
-[Head back to the main page](https://jsebcort.github.io/NeedlemanWunsch/)
+[Head back to the Main Page](https://jsebcort.github.io/NeedlemanWunsch/)
