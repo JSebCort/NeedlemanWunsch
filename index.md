@@ -2,6 +2,8 @@
 
 Below you will find links across our site for information about our project.
 
+All of the files required to run the program are on our [GitHub page](https://github.com/JSebCort/NeedlemanWunsch)
+
 [Group Members & Roles](https://jsebcort.github.io/NeedlemanWunsch/members)
 
 [History of Needleman-Wunsch](https://jsebcort.github.io/NeedlemanWunsch/history)
