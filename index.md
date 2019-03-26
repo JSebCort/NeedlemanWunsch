@@ -4,31 +4,12 @@ You can use the [editor on GitHub](https://github.com/JSebCort/NeedlemanWunsch/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-## **Group Members & Their Roles**
+# Welcome to our project page!
 
-### Project Manager – Christopher Brown 
+Below you will find links across our site for information about our project.
 
-Animal body part they would want: Bat ears
-
-### Researcher – Andrew March
-
-Animal body part they would want: Elephant trunk
-
-### Quality Assurance Specialist – Jennifer Mince 
-
-Animal body part they would want: Eagle wings
-
-### Developer – Edmund Sherman
-
-Animal body part they would want: Octopus tentacles
-
-### Technical Writer – Sebastian Cortes
-
-Animal body part they would want: Crab claws
-
-### GUI Developer – Whitney Trovinger
-
-Animal body part they would want: Fish tail
+[Group Members & Roles](https://jsebcort.github.io/NeedlemanWunsch/members)
+[History of Needleman-Wunsch](https://jsebcort.github.io/NeedlemanWunsch/history)
 
 ### Markdown
 
