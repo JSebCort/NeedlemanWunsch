@@ -9,6 +9,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Below you will find links across our site for information about our project.
 
 [Group Members & Roles](https://jsebcort.github.io/NeedlemanWunsch/members)
+
 [History of Needleman-Wunsch](https://jsebcort.github.io/NeedlemanWunsch/history)
 
 ### Markdown
