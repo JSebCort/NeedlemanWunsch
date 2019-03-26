@@ -29,3 +29,6 @@ Animal body part they would want: Crab claws
 ### GUI Developer – Whitney Trovinger
 
 Animal body part they would want: Fish tail
+
+
+[Head back to the main page](https://jsebcort.github.io/NeedlemanWunsch/)
