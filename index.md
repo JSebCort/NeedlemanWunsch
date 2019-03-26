@@ -6,7 +6,7 @@ Below you will find links across our site for information about our project.
 
 [History of Needleman-Wunsch](https://jsebcort.github.io/NeedlemanWunsch/history)
 
-[Motivations]((https://jsebcort.github.io/NeedlemanWunsch/motivations)
+[Motivations](https://jsebcort.github.io/NeedlemanWunsch/motivations)
 
 [Project Analysis](https://jsebcort.github.io/NeedlemanWunsch/analysis)
 
