@@ -8,7 +8,7 @@ title: Group Members
 
 ### Project Manager – Christopher Brown 
 
-![Picture](ChristopherBrown.png)
+![Picture](pictures/ChristopherBrown.png)
 
 Animal body part they would want: Bat ears
 
@@ -24,7 +24,7 @@ Responsibilities:
 
 ### Quality Assurance Specialist – Jennifer Mince 
 
-![Picture](JMince.jpg)
+![Picture](pictures/JMince.jpg)
 
 Animal body part they would want: Eagle wings
 
@@ -34,11 +34,13 @@ Responsibilities:
 
 ### Developer – Edmund Sherman
 
+![Picture](pictures/DisplayPhotoMe.jpg)
+
 Animal body part they would want: Octopus tentacles
 
 ### Technical Writer – Sebastian Cortes
 
-![Picture](JSCG.jpeg)
+![Picture](pictures/JSCG.jpeg)
 
 Animal body part they would want: Crab claws
 
@@ -49,7 +51,7 @@ Responsibilities:
 
 ### GUI Developer – Whitney Trovinger
 
-![Picture](itsame.jpg)
+![Picture](pictures/itsame.jpg)
 
 Animal body part they would want: Fish tail
 
