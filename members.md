@@ -34,7 +34,7 @@ Responsibilities:
 
 ### Developer – Edmund Sherman
 
-![Picture](pictures/DisplayPhotoMe.jpg)
+![Picture](pictures/DisplayPhotoMe.jpeg)
 
 Animal body part they would want: Octopus tentacles
 
