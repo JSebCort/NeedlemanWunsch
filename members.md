@@ -12,9 +12,13 @@ title: Group Members
 
 Animal body part they would want: Bat ears
 
+Responsibilities:
+
 ### Researcher – Andrew March
 
 Animal body part they would want: Elephant trunk
+
+Responsibilities:
 
 ### Quality Assurance Specialist – Jennifer Mince 
 
@@ -43,7 +47,11 @@ Responsibilities:
 
 ### GUI Developer – Whitney Trovinger
 
+![Picture](itsame.jpg)
+
 Animal body part they would want: Fish tail
+
+Responsibilities:
 
 
 [Head back to the Main Page](https://jsebcort.github.io/NeedlemanWunsch/)
