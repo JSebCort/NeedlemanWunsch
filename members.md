@@ -23,7 +23,9 @@ Animal body part they would want: Eagle wings
 Animal body part they would want: Octopus tentacles
 
 ### Technical Writer – Sebastian Cortes
+
 ![Picture](JSCG.jpeg)
+
 Animal body part they would want: Crab claws
 
 ### GUI Developer – Whitney Trovinger
