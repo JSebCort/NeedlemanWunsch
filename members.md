@@ -16,6 +16,8 @@ Responsibilities:
 
 ### Researcher – Andrew March
 
+![Picture](AndrewMarch.jpg)
+
 Animal body part they would want: Elephant trunk
 
 Responsibilities:
