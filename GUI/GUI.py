@@ -55,7 +55,7 @@ b2.pack(anchor =W, side=TOP, padx= 10, pady=5)
 
 op = ["Needleman", "Brute Force", "Alg1", "Potato"]
 v = StringVar(m)
-v.set("Needleman ") # default value
+v.set("Needleman") # default value
 
 l3 = Label(m, text="Choose an Algorithm")
 l3.pack(anchor =W, side=TOP,padx=7)
@@ -68,6 +68,12 @@ def ok():
 
     if(v.get() == "Brute Force"):
         bio.brutForce(file1, file2)
+    if(v.get() == "Needleman"):
+        bio.NW(file1,file2)
+    if(v.get() == "Alg1"): 
+        bio.Pointers(file1, file2)
+    if(v.get() == "Potato"): 
+        bio.Diagonal(file1, file2)
 
 b3 = Button(m, text="Run", width=8, command=ok)
 b3.pack(anchor =W, side=TOP, padx= 10, pady=5)
