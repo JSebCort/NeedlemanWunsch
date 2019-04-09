@@ -7,7 +7,10 @@ m = Tk()
 
 m.title('Project 2 - Bioinformatics')
 
-m.geometry("600x450+400+100")
+height=450
+width=600
+
+m.geometry("600x470+400+100")
 #.geometry("window width x window height + position right + position down")
 
 file1 = "" 
@@ -35,6 +38,13 @@ def callback1():
 
 main_l = Label(m, text="Alignment Algorithms", font=("Calibri", 16))
 main_l.pack(anchor =N, side=TOP, pady = 10)
+
+canvas_top = Canvas(m, width=600, height=3)
+canvas_top.pack()
+
+canvas_top.create_line(0, 3, width, 3) 
+
+
 
 l2 = Label(m, text="File Selection",font=("Calibri", 11))
 l2.pack(anchor =W, side=TOP,padx=7)
@@ -95,7 +105,9 @@ def ok():
     if(v.get() == "Brute Force"):
         bio.brutForce(file1, file2)
     if(v.get() == "Needleman"):
+        #start time
         bio.NW(file1,file2)
+        #end time
     if(v.get() == "Alg1"): 
         bio.Pointers(file1, file2)
     if(v.get() == "Potato"): 
