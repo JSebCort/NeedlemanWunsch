@@ -1,12 +1,13 @@
 from tkinter import filedialog
 from tkinter import *
+from tkinter import messagebox
 import BioProject2 as bio
  
 m = Tk()
 
-m.title('Project 2 - NeedlemanWunsch')
+m.title('Project 2 - Bioinformatics')
 
-m.geometry("600x400+400+100")
+m.geometry("600x450+400+100")
 #.geometry("window width x window height + position right + position down")
 
 file1 = "" 
@@ -32,10 +33,10 @@ def callback1():
     with open(m.filename, 'r') as f:
         file2 = f.read()
 
-main_l = Label(m, text="Needleman-Wunsch Algorithms", font=("Calibri", 16))
-l2 = Label(m, text="File Selection")
-
+main_l = Label(m, text="Alignment Algorithms", font=("Calibri", 16))
 main_l.pack(anchor =N, side=TOP, pady = 10)
+
+l2 = Label(m, text="File Selection",font=("Calibri", 11))
 l2.pack(anchor =W, side=TOP,padx=7)
 
 #left hand side text field, buttons, created in order. 
@@ -57,14 +58,39 @@ op = ["Needleman", "Brute Force", "Alg1", "Potato"]
 v = StringVar(m)
 v.set("Needleman") # default value
 
-l3 = Label(m, text="Choose an Algorithm")
-l3.pack(anchor =W, side=TOP,padx=7)
+l3 = Label(m, text="Algorithm",font=("Calibri", 12))
+l3.pack(anchor =W, side=TOP,padx=7,pady = 3)
 
 w = OptionMenu(m, v, *op)
 w.pack(anchor =W, side=TOP, padx=8, pady=5)
 
+label_score = Label(m, text="Scoring",font=("Calibri", 12))
+label_score.pack(anchor =W, side=TOP, padx=7, pady = 3)
+
+l4 = Label(m, text="Match")
+l4.pack(anchor =W, side=TOP,padx=7)
+
+t3 = Text(m, height=1, width=8)
+t3.pack(anchor =W, side=TOP, padx=10, pady=5)
+
+l4 = Label(m, text="Mismatch")
+l4.pack(anchor =W, side=TOP,padx=7)
+
+t4 = Text(m, height=1, width=8)
+t4.pack(anchor =W, side=TOP, padx=10, pady=5)
+
 def ok():
     print ("value is: " + v.get())
+    
+    try:  
+        score = int(t3.get("1.0",'end-1c')) 
+    except ValueError:
+        messagebox.showerror("Error", "A number was not entered or there was an empty field.")
+
+    try: 
+        mismatch = int(t4.get("1.0",'end-1c'))
+    except ValueError:
+        messagebox.showerror("Error", "A number was not entered or there was an empty field.")
 
     if(v.get() == "Brute Force"):
         bio.brutForce(file1, file2)
@@ -74,6 +100,8 @@ def ok():
         bio.Pointers(file1, file2)
     if(v.get() == "Potato"): 
         bio.Diagonal(file1, file2)
+
+    
 
 b3 = Button(m, text="Run", width=8, command=ok)
 b3.pack(anchor =W, side=TOP, padx= 10, pady=5)
