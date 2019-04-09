@@ -1,5 +1,6 @@
 from tkinter import filedialog
 from tkinter import *
+import BioProject2 as bio
  
 m = Tk()
 
@@ -8,10 +9,14 @@ m.title('Project 2 - NeedlemanWunsch')
 m.geometry("600x400+400+100")
 #.geometry("window width x window height + position right + position down")
 
-global file1
-global file2 
+file1 = "" 
+file2 = "" 
 
 def callback():
+
+    global file1 
+    global file2 
+
     m.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select File One",filetypes = (("txt files","*.txt"),("all files","*.*")))
     
     t.insert(END, m.filename)
@@ -60,6 +65,9 @@ w.pack(anchor =W, side=TOP, padx=8, pady=5)
 
 def ok():
     print ("value is: " + v.get())
+
+    if(v.get() == "Brute Force"):
+        bio.brutForce(file1, file2)
 
 b3 = Button(m, text="Run", width=8, command=ok)
 b3.pack(anchor =W, side=TOP, padx= 10, pady=5)
