@@ -13,8 +13,10 @@ width=600
 m.geometry("600x470+400+100")
 #window width x window height + position right + position down
 
-file1 = "" 
+file1 = ""
 file2 = "" 
+file_temp = "" 
+file_temp2 = "" 
 
 def callback():
 
@@ -26,15 +28,14 @@ def callback():
     t.insert(END, m.filename)
     
     with open(m.filename, 'r') as f:
-        file1 = f.read()
-    
+        file_temp = f.read()
 
-#    for i in file1: 
- #       if(i != 'A' or i != "G" or i != "C" or i != "T"):
-  #          file1.replace(i, "-")
-   # for i in file2: 
-    #    if(i != "A" or i != "G" or i != "C" or i != "T"):
-     #      file2.replace(i, "-")
+    for i in file_temp: 
+        if(i == "A" or i == "C" or i == "G" or i == "T"):
+            file1 = file1 + i
+        else: 
+            file1 = file1 + '-'
+    
 
 def callback1():
     m.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select File Two",filetypes = (("txt files","*.txt"),("all files","*.*")))
@@ -42,7 +43,14 @@ def callback1():
     t2.insert(END, m.filename)
     
     with open(m.filename, 'r') as f:
-        file2 = f.read()
+        file_temp2 = f.read()
+    
+    for i in file_temp2: 
+        if(i == "A" or i == "C" or i == "G" or i == "T"):
+            file2 = file2 + i
+        else: 
+            file2 = file2 + '-'
+
 
 main_l = Label(m, text="Alignment Algorithms", font=("Calibri", 16))
 main_l.grid(row=1, sticky=N)
@@ -110,6 +118,8 @@ l6.grid(row=6, sticky=N)
 t6 = Text(m, height=1, width=8)
 t6.grid(row=7, sticky=N)
 
+
+#function to execute each algorithm
 def run():
     print ("value is: " + v.get())
     
@@ -144,6 +154,7 @@ def run():
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
 
+#run button to actually run code 
 b3 = Button(m, text="Run", width=8, command=run)
 b3.grid(row=16, sticky=W)
 
