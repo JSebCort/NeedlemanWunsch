@@ -45,15 +45,14 @@ def callback1():
         file2 = f.read()
 
 main_l = Label(m, text="Alignment Algorithms", font=("Calibri", 16))
-main_l.pack(anchor =N, side=TOP, pady = 10)
+main_l.grid(row=1, sticky=N)
 
 canvas_top = Canvas(m, width=600, height=3)
-canvas_top.pack()
-
+canvas_top.grid(row=2, sticky=N)
 canvas_top.create_line(0, 3, width, 3) 
 
 l2 = Label(m, text="File Selection",font=("Calibri", 11))
-l2.pack(anchor =W, side=TOP,padx=7)
+l2.grid(row=4, sticky=N)
 
 #left hand side text field, buttons, created in order. 
 t = Text(m, height=1, width=8)
@@ -65,47 +64,47 @@ t2 = Text(m, height=1, width=8)
 
 
 #left hand side textfield, buttons for file openings 
-t.pack(anchor =W, side=TOP, padx=10, pady=5)
-b.pack(anchor =W, side=TOP, padx=10, pady=5)
-t2.pack(anchor =W, side=TOP, padx=10, pady=5)
-b2.pack(anchor =W, side=TOP, padx= 10, pady=5)
+t.grid(row=5, sticky=W)
+b.grid(row=6, sticky=W)
+t2.grid(row=7, sticky=W)
+b2.grid(row=8, sticky=W)
 
 op = ["Needleman", "Brute Force", "Alg1", "Potato"]
 v = StringVar(m)
 v.set("Needleman") # default value
 
 l3 = Label(m, text="Algorithm",font=("Calibri", 12))
-l3.pack(anchor =W, side=TOP,padx=7,pady = 3)
+l3.grid(row=9, sticky=W)
 
 w = OptionMenu(m, v, *op)
-w.pack(anchor =W, side=TOP, padx=8, pady=5)
+w.grid(row=10, sticky=W)
 
 label_score = Label(m, text="Scoring",font=("Calibri", 12))
-label_score.pack(anchor =W, side=TOP, padx=7, pady = 3)
+label_score.grid(row=11, sticky=W)
 
 l4 = Label(m, text="Match")
-l4.pack(anchor =W, side=TOP,padx=7)
+l4.grid(row=12, sticky=W)
 
 t3 = Text(m, height=1, width=8)
-t3.pack(anchor =W, side=TOP, padx=10, pady=5)
+t3.grid(row=13, sticky=W)
 
 l4 = Label(m, text="Mismatch")
-l4.pack(anchor =W, side=TOP,padx=7)
+l4.grid(row=14, sticky=W)
 
 t4 = Text(m, height=1, width=8)
-t4.pack(anchor =W, side=TOP, padx=10, pady=5)
+t4.grid(row=15, sticky=W)
 
 l4 = Label(m, text="Output Difference:")
-l4.pack(anchor =N, side=TOP, padx=10, pady=5)
+l4.grid(row=4, sticky=N)
 
 t5 = Text(m, height=1, width=8)
-t5.pack(anchor =N, side=TOP, padx=10, pady=5)
+t5.grid(row=5, sticky=N)
 
 l6 = Label(m, text="Score:")
-l6.pack(anchor =N, side=TOP, padx=10, pady=5)
+l6.grid(row=6, sticky=N)
 
 t6 = Text(m, height=1, width=8)
-t6.pack(anchor =N, side=TOP, padx=10, pady=5)
+t6.grid(row=7, sticky=N)
 
 def run():
     print ("value is: " + v.get())
@@ -142,7 +141,7 @@ def run():
         t6.insert(END, bio.min)
 
 b3 = Button(m, text="Run", width=8, command=run)
-b3.pack(anchor =W, side=TOP, padx= 10, pady=5)
+b3.grid(row=16, sticky=W)
 
 
 m.mainloop()
