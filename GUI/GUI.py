@@ -52,7 +52,7 @@ canvas_top.grid(row=2, sticky=N)
 canvas_top.create_line(0, 3, width, 3) 
 
 l2 = Label(m, text="File Selection",font=("Calibri", 11))
-l2.grid(row=4, sticky=N)
+l2.grid(row=4, sticky=W)
 
 #left hand side text field, buttons, created in order. 
 t = Text(m, height=1, width=8)
@@ -97,8 +97,12 @@ t4.grid(row=15, sticky=W)
 l4 = Label(m, text="Output Difference:")
 l4.grid(row=4, sticky=N)
 
-t5 = Text(m, height=1, width=8)
+t5 = Text(m, height=4, width=40)
 t5.grid(row=5, sticky=N)
+
+scroll = Scrollbar(m)
+scroll.config(command=t5.yview)
+t5.config(yscrollcommand=scroll.set)
 
 l6 = Label(m, text="Score:")
 l6.grid(row=6, sticky=N)
