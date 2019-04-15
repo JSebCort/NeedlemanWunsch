@@ -11,7 +11,7 @@ height=450
 width=600
 
 m.geometry("600x470+400+100")
-#.geometry("window width x window height + position right + position down")
+#window width x window height + position right + position down
 
 file1 = "" 
 file2 = "" 
@@ -27,6 +27,14 @@ def callback():
     
     with open(m.filename, 'r') as f:
         file1 = f.read()
+    
+
+#    for i in file1: 
+ #       if(i != 'A' or i != "G" or i != "C" or i != "T"):
+  #          file1.replace(i, "-")
+   # for i in file2: 
+    #    if(i != "A" or i != "G" or i != "C" or i != "T"):
+     #      file2.replace(i, "-")
 
 def callback1():
     m.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select File Two",filetypes = (("txt files","*.txt"),("all files","*.*")))
@@ -43,8 +51,6 @@ canvas_top = Canvas(m, width=600, height=3)
 canvas_top.pack()
 
 canvas_top.create_line(0, 3, width, 3) 
-
-
 
 l2 = Label(m, text="File Selection",font=("Calibri", 11))
 l2.pack(anchor =W, side=TOP,padx=7)
@@ -89,7 +95,19 @@ l4.pack(anchor =W, side=TOP,padx=7)
 t4 = Text(m, height=1, width=8)
 t4.pack(anchor =W, side=TOP, padx=10, pady=5)
 
-def ok():
+l4 = Label(m, text="Output Difference:")
+l4.pack(anchor =N, side=TOP, padx=10, pady=5)
+
+t5 = Text(m, height=1, width=8)
+t5.pack(anchor =N, side=TOP, padx=10, pady=5)
+
+l6 = Label(m, text="Score:")
+l6.pack(anchor =N, side=TOP, padx=10, pady=5)
+
+t6 = Text(m, height=1, width=8)
+t6.pack(anchor =N, side=TOP, padx=10, pady=5)
+
+def run():
     print ("value is: " + v.get())
     
     try:  
@@ -104,18 +122,26 @@ def ok():
 
     if(v.get() == "Brute Force"):
         bio.brutForce(file1, file2)
+        #print(bio.score)
+        t5.insert(END, bio.best1)
+        t6.insert(END, bio.min)
+
     if(v.get() == "Needleman"):
         #start time
         bio.NW(file1,file2)
         #end time
+        t5.insert(END, bio.best1)
+        t6.insert(END, bio.min)
     if(v.get() == "Alg1"): 
         bio.Pointers(file1, file2)
-    if(v.get() == "Potato"): 
+        t5.insert(END, bio.best1)
+        t6.insert(END, bio.min)
+    if(v.get() == "Potato"):
         bio.Diagonal(file1, file2)
+        t5.insert(END, bio.best1)
+        t6.insert(END, bio.min)
 
-    
-
-b3 = Button(m, text="Run", width=8, command=ok)
+b3 = Button(m, text="Run", width=8, command=run)
 b3.pack(anchor =W, side=TOP, padx= 10, pady=5)
 
 
