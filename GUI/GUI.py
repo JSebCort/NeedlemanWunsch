@@ -53,14 +53,14 @@ def callback1():
 
 
 main_l = Label(m, text="Alignment Algorithms", font=("Calibri", 16))
-main_l.grid(row=1, sticky=N)
+main_l.grid(row=0, sticky=N)
 
 canvas_top = Canvas(m, width=600, height=3)
-canvas_top.grid(row=2, sticky=N)
+canvas_top.grid(row=1, sticky=N)
 canvas_top.create_line(0, 3, width, 3) 
 
-l2 = Label(m, text="File Selection",font=("Calibri", 11))
-l2.grid(row=4, sticky=W)
+l2 = Label(m, text="File Selection", font=("Calibri", 12))
+l2.grid(row=5, sticky=W)
 
 #left hand side text field, buttons, created in order. 
 t = Text(m, height=1, width=8)
@@ -72,38 +72,39 @@ t2 = Text(m, height=1, width=8)
 
 
 #left hand side textfield, buttons for file openings 
-t.grid(row=5, sticky=W)
-b.grid(row=6, sticky=W)
-t2.grid(row=7, sticky=W)
-b2.grid(row=8, sticky=W)
+t.grid(row=6, sticky=W)
+b.grid(row=7, sticky=W)
+t2.grid(row=8, sticky=W)
+b2.grid(row=9, sticky=W)
 
 op = ["Needleman", "Brute Force", "Alg1", "Potato"]
 v = StringVar(m)
 v.set("Needleman") # default value
 
 l3 = Label(m, text="Algorithm",font=("Calibri", 12))
-l3.grid(row=9, sticky=W)
+l3.grid(row=12, sticky=W)
 
 w = OptionMenu(m, v, *op)
-w.grid(row=10, sticky=W)
+w.grid(row=13, sticky=W)
 
 label_score = Label(m, text="Scoring",font=("Calibri", 12))
-label_score.grid(row=11, sticky=W)
+label_score.grid(row=15, sticky=W)
 
 l4 = Label(m, text="Match")
-l4.grid(row=12, sticky=W)
+l4.grid(row=16, sticky=W)
 
 t3 = Text(m, height=1, width=8)
-t3.grid(row=13, sticky=W)
+t3.grid(row=17, sticky=W)
 
-l4 = Label(m, text="Mismatch")
-l4.grid(row=14, sticky=W)
+#label 5
+l5 = Label(m, text="Mismatch")
+l5.grid(row=18, sticky=W)
 
 t4 = Text(m, height=1, width=8)
-t4.grid(row=15, sticky=W)
+t4.grid(row=19, sticky=W)
 
-l4 = Label(m, text="Output Difference:")
-l4.grid(row=4, sticky=N)
+l6 = Label(m, text="Output Difference:")
+l6.grid(row=4, sticky=N)
 
 t5 = Text(m, height=4, width=40)
 t5.grid(row=5, sticky=N)
@@ -112,8 +113,8 @@ scroll = Scrollbar(m)
 scroll.config(command=t5.yview)
 t5.config(yscrollcommand=scroll.set)
 
-l6 = Label(m, text="Score:")
-l6.grid(row=6, sticky=N)
+l7 = Label(m, text="Score:")
+l7.grid(row=6, sticky=N)
 
 t6 = Text(m, height=1, width=8)
 t6.grid(row=7, sticky=N)
@@ -156,7 +157,7 @@ def run():
 
 #run button to actually run code 
 b3 = Button(m, text="Run", width=8, command=run)
-b3.grid(row=16, sticky=W)
+b3.grid(row=20, sticky=W)
 
 
 m.mainloop()
