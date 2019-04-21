@@ -2,7 +2,7 @@
 layout: default
 title: How-To
 ---
-# Guide on how to use our program
+# How-To Run our Needleman-Wunsch Algorithm Program
 
 1.	Download our folder
 2.	Run the GUI.py file
