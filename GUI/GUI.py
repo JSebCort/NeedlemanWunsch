@@ -10,7 +10,7 @@ m.title('Project 2 - Bioinformatics')
 height=450
 width=600
 
-m.geometry("600x470+400+100")
+m.geometry("600x500+400+100")
 #window width x window height + position right + position down
 
 file1 = ""
@@ -82,42 +82,55 @@ v = StringVar(m)
 v.set("Needleman") # default value
 
 l3 = Label(m, text="Algorithm",font=("Calibri", 12))
-l3.grid(row=12, sticky=W)
+l3.grid(row=13, sticky=W)
 
 w = OptionMenu(m, v, *op)
-w.grid(row=13, sticky=W)
+w.grid(row=14, sticky=W)
 
 label_score = Label(m, text="Scoring",font=("Calibri", 12))
-label_score.grid(row=15, sticky=W)
+label_score.grid(row=17, sticky=W)
 
-l4 = Label(m, text="Match")
-l4.grid(row=16, sticky=W)
+l4 = Label(m, text="Match:")
+l4.grid(row=18, sticky=W)
 
 t3 = Text(m, height=1, width=8)
-t3.grid(row=17, sticky=W)
+t3.grid(row=19, sticky=W)
+t3.insert('1.0', '5')
 
 #label 5
-l5 = Label(m, text="Mismatch")
-l5.grid(row=18, sticky=W)
+l5 = Label(m, text="Mismatch:")
+l5.grid(row=20, sticky=W)
 
 t4 = Text(m, height=1, width=8)
-t4.grid(row=19, sticky=W)
+t4.grid(row=21, sticky=W)
+t4.insert('1.0', '-1')
+
+l8 = Label(m, text="Gap:")
+l8.grid(row=23, sticky=W)
+
+t7 = Text(m, height=1, width=8)
+t7.grid(row=24, sticky=W)
+t7.insert('1.0', '-2')
 
 l6 = Label(m, text="Output Difference:")
-l6.grid(row=4, sticky=N)
+l6.grid(row=5, sticky=N)
 
 t5 = Text(m, height=4, width=40)
-t5.grid(row=5, sticky=N)
+t5.grid(row=7, sticky=N)
 
 scroll = Scrollbar(m)
 scroll.config(command=t5.yview)
 t5.config(yscrollcommand=scroll.set)
 
 l7 = Label(m, text="Score:")
-l7.grid(row=6, sticky=N)
+l7.grid(row=8, sticky=N)
 
+#textbox Score
 t6 = Text(m, height=1, width=8)
-t6.grid(row=7, sticky=N)
+t6.grid(row=9, sticky=N)
+
+
+
 
 
 #function to execute each algorithm
@@ -131,6 +144,11 @@ def run():
 
     try: 
         mismatch = int(t4.get("1.0",'end-1c'))
+    except ValueError:
+        messagebox.showerror("Error", "A number was not entered or there was an empty field.")
+
+    try: 
+        gap = int(t4.get("1.0",'end-1c'))
     except ValueError:
         messagebox.showerror("Error", "A number was not entered or there was an empty field.")
 
@@ -157,7 +175,7 @@ def run():
 
 #run button to actually run code 
 b3 = Button(m, text="Run", width=8, command=run)
-b3.grid(row=20, sticky=W)
+b3.grid(row=27, sticky=W)
 
 
 m.mainloop()
