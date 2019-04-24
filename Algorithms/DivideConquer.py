@@ -152,6 +152,21 @@ def DivideConquer(s1, s2):# devideds up strings and compares them
             endgap = 0
             score = 0
 
+        if(len(list1) > len(list2)):
+            num = len(list1) - len(list2)
+        elif(len(list1) < len(list2)):
+            num = len(list2) - len(list1)
+
+        for i in range (num+1 , len(list1)):
+            temp1 = list1[i]
+            score = score + ( len(temp1)*gap)
+            totalgap = totalgap + len(temp1)
+            print("score: " , score)
+            print("totalgap " , totalgap)
+            print(temp1)
+
+
+
                             
                         
 
