@@ -2,6 +2,13 @@ from tkinter import filedialog
 from tkinter import *
 from tkinter import messagebox
 import BioProject2 as bio
+import time
+
+#t0 = time.time()
+#code_block
+#t1 = time.time()
+
+#total = t1-t0
  
 m = Tk()
 
@@ -170,7 +177,7 @@ t6.grid(row=15, sticky=N)
 
 
 #time box 
-l8 = Label(m, text="Time:")
+l8 = Label(m, text="Time (Seconds):")
 l8.grid(row=16, sticky=N)
 
 t7 = Text(m, height=1, width=8)
@@ -180,6 +187,8 @@ t7.grid(row=17, sticky=N)
 
 #function to execute each algorithm
 def run():
+
+    t7.delete('1.0', END)
     print ("value is: " + v.get())
     
     try:  
@@ -196,7 +205,8 @@ def run():
         gap = int(t4.get("1.0",'end-1c'))
     except ValueError:
         messagebox.showerror("Error", "A number was not entered or there was an empty field.")
-
+    
+    t0 = time.time()
     if(v.get() == "Brute Force"):
         bio.brutForce(file1, file2)
         #print(bio.score)
@@ -217,6 +227,10 @@ def run():
         bio.Diagonal(file1, file2)
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
+    t1 = time.time()
+    total = t1-t0
+    t7.insert(END, total)
+
 
 #run button to actually run code 
 b3 = Button(m, text="Run", width=8, command=run)
