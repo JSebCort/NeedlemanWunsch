@@ -12,7 +12,7 @@ All of the files required to run the program are on our [GitHub page](https://gi
 
 [Project Analysis](https://jsebcort.github.io/NeedlemanWunsch/analysis)
 
-[How to run our Needleman-Wunsch Algorithm program](https://jsebcort.github.io/NeedlemanWunsch/howto)
+[How to run our program](https://jsebcort.github.io/NeedlemanWunsch/howto)
 
 [Technical Information](https://jsebcort.github.io/NeedlemanWunsch/technical)
 
