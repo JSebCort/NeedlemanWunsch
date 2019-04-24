@@ -2,7 +2,7 @@
 layout: default
 title: Motivations
 ---
-# Motivations on the Needleman-Wunsch Algorithm
+# Motivations of the Needleman-Wunsch Algorithm
 
   The Needleman-Wunsch algorithm that solves the global alignment problem of protein
 and nucleotide sequences. The global alignment of sequences finds the way to align two whole
