@@ -7,9 +7,9 @@ from string import *
 
 
 #s1 = input('Enter a file name: ')
-s1 = "ATGTAGTGTATAAAGTACATGCA"
+s1 = "ATGTAGTGTATAAAGTACAATGCA"
 #s2 = input('Enter a file name: ')
-s2 = "ATGTAGTACATGCA"
+s2 = "ATGTAGTACATAAAGTCCGCTGCA"
 
 #list1 = "ACGTCAGGG"
 #list2 = "ACGTCAGGC"
@@ -91,8 +91,9 @@ def DivideConquer(s1, s2):# devideds up strings and compares them
                                 num = j + k
                                 break
                     print(score, num  , temp1[j], temp2[j])
-                    if(endgap > 0 ):
-                         score = score + (gap*endgap)
+                if(endgap > 0 ):
+                    endgap = endgap - 1
+                    score = score + (gap*(endgap))
                        
 
 
@@ -140,7 +141,8 @@ def DivideConquer(s1, s2):# devideds up strings and compares them
                                 break
                        
                         if(endgap > 0 ):
-                            score = score + (gap*endgap)
+                            endgap = endgap - 1
+                            score = score + (gap*(endgap))
 
                 score = score + (  (len(longer) - len(shorter))*gap)
             print("endgap " , endgap)
@@ -152,18 +154,28 @@ def DivideConquer(s1, s2):# devideds up strings and compares them
             endgap = 0
             score = 0
 
+        
         if(len(list1) > len(list2)):
             num = len(list1) - len(list2)
+
+            for i in range (num+1 , len(list1)):
+                temp1 = list1[i]
+                score = score + ( len(temp1)*gap)
+                totalgap = totalgap + len(temp1)
+                print("score: " , score)
+                print("totalgap " , totalgap)
+                print(temp1)
+
         elif(len(list1) < len(list2)):
             num = len(list2) - len(list1)
 
-        for i in range (num+1 , len(list1)):
-            temp1 = list1[i]
-            score = score + ( len(temp1)*gap)
-            totalgap = totalgap + len(temp1)
-            print("score: " , score)
-            print("totalgap " , totalgap)
-            print(temp1)
+            for i in range (num+1 , len(list1)):
+                temp1 = list1[i]
+                score = score + ( len(temp1)*gap)
+                totalgap = totalgap + len(temp1)
+                print("score: " , score)
+                print("totalgap " , totalgap)
+                print(temp1)
 
 
 
