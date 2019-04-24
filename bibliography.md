@@ -6,7 +6,7 @@ title: Bibliography
 
 
 
-bindipatel2008. “Needleman-Wunsch Algorithm.” YouTube, YouTube, 19 Apr. 2016, [www.youtube.com/watch?v=aD4Cc4L3qW0](www.youtube.com/watch?v=aD4Cc4L3qW0).
+bindipatel2008. “Needleman-Wunsch Algorithm.” YouTube, YouTube, 19 Apr. 2016, [www.youtube.com/watch?v=aD4Cc4L3qW0](http://www.youtube.com/watch?v=aD4Cc4L3qW0).
 
 Lab 12 - Needleman Wunsch Algorithm, [www.iiserpune.ac.in/~farhat/courses/idc205/lab12.html](www.iiserpune.ac.in/~farhat/courses/idc205/lab12.html).
 
