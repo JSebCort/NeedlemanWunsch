@@ -2,7 +2,7 @@
 layout: default
 title: History
 ---
-# History on the Needleman-Wunsch Algorithm
+# History of the Needleman-Wunsch Algorithm
 
    The Needleman-Wunsch algorithm is an algorithm developed to align protein or
 nucleotide sequences. This algorithm solves the problem of global alignment. Global alignment
