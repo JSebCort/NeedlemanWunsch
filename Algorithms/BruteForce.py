@@ -33,7 +33,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
     if(s1 == s2):#inf thy are the same 
         print(s1)
         print(s2)
-        print("score: " + len(s1))
+        print("score: " + str(len(s1)))
 
     elif(len(s1) == len(s2)):#if they are the same length
 
@@ -456,10 +456,11 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
           s2 = temp2
 
                    
-    print("brutforce")
+    #print("brutforce")
     print(best1)
     print(best2)
-    print("Score: " , max)
+    if(best1 != best2):
+        print("Score: " , max)
 
 
 brutForce(list1,list2)
