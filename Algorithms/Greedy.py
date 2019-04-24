@@ -30,7 +30,7 @@ def Greedy(s1, s2):#finds the fastest soluion
     if(s1 == s2):#if  strings are exactly the same 
         print(s1)
         print(s2)
-        print("score" + len(s1))
+        print("score" + str(len(s1)))
 
     elif(len(s1) == len(s2)):#if theyre the same length loops throught 
         for i in range(len(s1)):
@@ -216,7 +216,8 @@ def Greedy(s1, s2):#finds the fastest soluion
     print("Greedy")
     print(best1)
     print(best2)
-    print("Score: " , max)              
+    if(best1 != best2):
+        print("Score: " , max)              
                 
 
 Greedy(list1,list2)
