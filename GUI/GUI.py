@@ -20,6 +20,9 @@ file_temp2 = ""
 
 def callback():
 
+    t.delete('1.0', END)
+    textshow1.delete('1.0', END)
+
     global file1 
     global file2 
 
@@ -29,22 +32,31 @@ def callback():
     
     with open(m.filename, 'r') as f:
         file_temp = f.read()
+    
+    textshow1.insert('1.0', file_temp)
 
     for i in file_temp: 
         if(i == "A" or i == "C" or i == "G" or i == "T"):
             file1 = file1 + i
         else: 
             file1 = file1 + '-'
+
+    
     
 
 def callback1():
     m.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select File Two",filetypes = (("txt files","*.txt"),("all files","*.*")))
     
+    t2.delete('1.0', END)
+    textshow2.delete('1.0', END)
+
     t2.insert(END, m.filename)
     
     with open(m.filename, 'r') as f:
         file_temp2 = f.read()
     
+    textshow2.insert('1.0', file_temp2)
+
     for i in file_temp2: 
         if(i == "A" or i == "C" or i == "G" or i == "T"):
             file2 = file2 + i
@@ -56,18 +68,20 @@ main_l = Label(m, text="Alignment Algorithms", font=("Calibri", 16))
 main_l.grid(row=0, sticky=N)
 
 canvas_top = Canvas(m, width=600, height=3)
-canvas_top.grid(row=1, sticky=N)
+canvas_top.grid(row=3, sticky=N)
 canvas_top.create_line(0, 3, width, 3) 
 
-l2 = Label(m, text="File Selection", font=("Calibri", 12))
-l2.grid(row=5, sticky=W)
+l2 = Label(m, text="File Selection", font=("Calibri", 11))
+l2.grid(row=5, sticky=W, column=0)
+
+#label_side = Label(m, text="Welcome. Please choose two files to begin. Then select an algorithm from the drop down list.")
+#label_side.grid(sticky=N, row=2)
 
 #left hand side text field, buttons, created in order. 
-t = Text(m, height=1, width=8)
-
 b = Button(m, text="Select", width=8, command=callback)
 b2 = Button(m, text="Select", width=8, command=callback1)
 
+t = Text(m, height=1, width=8)
 t2 = Text(m, height=1, width=8)
 
 
@@ -82,54 +96,85 @@ v = StringVar(m)
 v.set("Needleman") # default value
 
 l3 = Label(m, text="Algorithm",font=("Calibri", 12))
-l3.grid(row=13, sticky=W)
+l3.grid(row=10, sticky=W)
 
 w = OptionMenu(m, v, *op)
-w.grid(row=14, sticky=W)
+w.grid(row=11, sticky=W)
 
 label_score = Label(m, text="Scoring",font=("Calibri", 12))
-label_score.grid(row=17, sticky=W)
+label_score.grid(row=12, sticky=W)
 
 l4 = Label(m, text="Match:")
-l4.grid(row=18, sticky=W)
+l4.grid(row=13, sticky=W)
 
 t3 = Text(m, height=1, width=8)
-t3.grid(row=19, sticky=W)
+t3.grid(row=14, sticky=W)
 t3.insert('1.0', '5')
 
 #label 5
 l5 = Label(m, text="Mismatch:")
-l5.grid(row=20, sticky=W)
+l5.grid(row=15, sticky=W)
 
 t4 = Text(m, height=1, width=8)
-t4.grid(row=21, sticky=W)
+t4.grid(row=16, sticky=W)
 t4.insert('1.0', '-1')
 
 l8 = Label(m, text="Gap:")
-l8.grid(row=23, sticky=W)
+l8.grid(row=17, sticky=W)
 
 t7 = Text(m, height=1, width=8)
-t7.grid(row=24, sticky=W)
+t7.grid(row=18, sticky=W)
 t7.insert('1.0', '-2')
 
+#show file 1 
+fileshow1 = Label(m, text="File 1:")
+fileshow1.grid(row=5, sticky=N)
+
+textshow1 = Text(m, height=4, width=40)
+textshow1.grid(row=6, sticky=N,columnspan=2, rowspan = 2)
+
+scroll2 = Scrollbar(m, command=textshow1.yview)
+scroll2.grid(row=6, sticky=N+S+E)
+textshow1['yscrollcommand'] = scroll2.set
+
+#show file 2 
+fileshow2 = Label(m, text="File 2:")
+fileshow2.grid(row=8, sticky=N)
+
+textshow2 = Text(m, height=4, width=40)
+textshow2.grid(row=9, sticky=N,columnspan=2, rowspan = 2)
+
+scroll3 = Scrollbar(m, command=textshow2.yview)
+scroll3.grid(row=9, sticky=N+S+E)
+textshow2['yscrollcommand'] = scroll3.set
+
+#more labels
 l6 = Label(m, text="Output Difference:")
-l6.grid(row=5, sticky=N)
+l6.grid(row=11, sticky=N)
 
-t5 = Text(m, height=4, width=40)
-t5.grid(row=7, sticky=N)
+t5 = Text(m, height=5, width=40)
+t5.grid(row=12, sticky=N,columnspan=2, rowspan = 2)
 
-scroll = Scrollbar(m)
-scroll.config(command=t5.yview)
-t5.config(yscrollcommand=scroll.set)
+#scrollbar
+scroll = Scrollbar(m, command=t5.yview)
+scroll.grid(row=12, sticky=N+S+E)
+t5['yscrollcommand'] = scroll.set
 
+#score
 l7 = Label(m, text="Score:")
-l7.grid(row=8, sticky=N)
+l7.grid(row=14, sticky=N)
 
 #textbox Score
 t6 = Text(m, height=1, width=8)
-t6.grid(row=9, sticky=N)
+t6.grid(row=15, sticky=N)
 
 
+#time box 
+l8 = Label(m, text="Time:")
+l8.grid(row=16, sticky=N)
+
+t7 = Text(m, height=1, width=8)
+t7.grid(row=17, sticky=N)
 
 
 
@@ -175,7 +220,7 @@ def run():
 
 #run button to actually run code 
 b3 = Button(m, text="Run", width=8, command=run)
-b3.grid(row=27, sticky=W)
+b3.grid(row=19, sticky=W)
 
 
 m.mainloop()
