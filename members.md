@@ -50,8 +50,8 @@ Responsibilities:
 1. Construct four different ways of implementing the Needleman-Wunsch algorithm:
     - Brute Force Algorithm
     - Dynamic Algorithm
-    - Random Algorithm
-    - Greedy/Divide & Conquer Algorithm
+    - Random / Divide & Conquer Algorithm
+    - Greedy Algorithm
     
 # REMEMBER TO FIX THE ABOVE, EITHER GREEDY OR D&C ONLY
 
