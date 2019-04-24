@@ -56,7 +56,7 @@ def Random(s1, s2):
                             break
                          elif( temp1[i] == temp2[j+i]):
                             score = score + (gap*j)
-                            num = j + k
+                            num = j + i
                             break
                          elif(temp1[j+i] == temp2[i]):
                             score = score + (gap*j)
@@ -69,7 +69,7 @@ def Random(s1, s2):
 
                          if( temp1[i] == temp2[j+i]):
                             score = score + (gap*j)
-                            num = j + k
+                            num = j + i
                             break
 
                          elif( temp1[j+i] == temp2[j+i]):
@@ -88,7 +88,7 @@ def Random(s1, s2):
                          
                          if( temp1[i] == temp2[j+i]):
                             score = score + (gap*j)
-                            num = j + k
+                            num = j + i
                             break
                          elif(temp1[j+i] == temp2[i]):
                             score = score + (gap*j)
