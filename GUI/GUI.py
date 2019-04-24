@@ -208,25 +208,30 @@ def run():
     
     t0 = time.time()
     if(v.get() == "Brute Force"):
-        bio.brutForce(file1, file2)
+        bio.brutForce(file1, file2, score, mismatch, gap)
         #print(bio.score)
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
 
     if(v.get() == "Needleman"):
         #start time
-        bio.NW(file1,file2)
+        bio.NW(file1,file2,score, mismatch, gap)
         #end time
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
     if(v.get() == "Alg1"): 
-        bio.Pointers(file1, file2)
+
+        #file 1, file 1 , match, mismatch, gap
+        bio.Pointers(file1, file2,score, mismatch, gap)
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
+
     if(v.get() == "Potato"):
-        bio.Diagonal(file1, file2)
+
+        bio.Diagonal(file1, file2,score, mismatch, gap)
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
+
     t1 = time.time()
     total = t1-t0
     t7.insert(END, total)
@@ -235,6 +240,5 @@ def run():
 #run button to actually run code 
 b3 = Button(m, text="Run", width=8, command=run)
 b3.grid(row=19, sticky=W)
-
 
 m.mainloop()
