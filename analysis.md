@@ -13,4 +13,7 @@ title: Analysis
 
 ![Picture](Images/grap.PNG)
 
+
+[Further Analysis in PDF](Documentation/Bioinformatics%20Project%202%20QA%20Test%20Cases%20and%20Known%20Issues.pdf)
+
 [Head back to the Main Page](https://jsebcort.github.io/NeedlemanWunsch/)
