@@ -12,6 +12,6 @@ Lab 12 - Needleman Wunsch Algorithm, [www.iiserpune.ac.in/~farhat/courses/idc205
 
 KonstantinKonstantin. “Details of Needleman–Wunsch Algorithm.” Biology Stack Exchange, [biology.stackexchange.com/questions/68440/details-of-needleman-wunsch-algorithm](http://biology.stackexchange.com/questions/68440/details-of-needleman-wunsch-algorithm).
 
-“2.1 Pairwise Sequence Alignment [Edit]¶.” An Introduction to Applied Bioinformatics, [readiab.org/book/0.1.3/2/1](https://readiab.org/book/0.1.3/2/1). 
+“2.1 Pairwise Sequence Alignment". An Introduction to Applied Bioinformatics, [readiab.org/book/0.1.3/2/1](https://readiab.org/book/0.1.3/2/1). 
 
 [Head back to the Main Page](https://jsebcort.github.io/NeedlemanWunsch/)
