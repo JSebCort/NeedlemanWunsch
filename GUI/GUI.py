@@ -1,7 +1,7 @@
 from tkinter import filedialog
 from tkinter import *
 from tkinter import messagebox
-import BruteForce as b
+import BruteForce as bru
 import DivideConquer as DV
 import Greedy as g 
 import Random as r
@@ -211,29 +211,29 @@ def run():
     
     t0 = time.time()
     if(v.get() == "Brute Force"):
-        b.brutForce(file1, file2, score, mismatch, gap)
+        bru.brutForce(file1, file2, score, mismatch, gap)
         #print(bio.score)
-        t5.insert(END, bio.best1)
-        t6.insert(END, bio.min)
+        t5.insert(END, bru.best1)
+        t6.insert(END, bru.min)
 
     if(v.get() == "Divide and Conquer"):
         #start time
         DV.DivideConquer(file1,file2, score, mismatch, gap)
         #end time
-        t5.insert(END, bio.best1)
-        t6.insert(END, bio.min)
+        t5.insert(END, DV.best1)
+        t6.insert(END, DV.min)
     if(v.get() == "Random"): 
 
         #file 1, file 1 , match, mismatch, gap
         r.Random(file1, file2, score, mismatch, gap)
-        t5.insert(END, bio.best1)
-        t6.insert(END, bio.min)
+        t5.insert(END, r.best1)
+        t6.insert(END, r.min)
 
     if(v.get() == "Greedy"):
 
         g.Greedy(file1, file2, score, mismatch, gap)
-        t5.insert(END, bio.best1)
-        t6.insert(END, bio.min)
+        t5.insert(END, g.best1)
+        t6.insert(END, g.max)
 
     t1 = time.time()
     total = t1-t0
