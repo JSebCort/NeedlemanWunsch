@@ -8,6 +8,7 @@ import BruteForce as bru
 import DivideConquer as DV
 import Greedy as g 
 import Random as r
+import NeedlemanWunsch as nw
 import time
 
 #t0 = time.time()
@@ -15,7 +16,8 @@ import time
 #t1 = time.time()
 
 #total = t1-t0
- 
+
+#naming master 
 m = Tk()
 
 m.title('Project 2 - Bioinformatics')
@@ -107,9 +109,10 @@ b.grid(row=7, sticky=W)
 t2.grid(row=8, sticky=W)
 b2.grid(row=9, sticky=W)
 
-op = ["Divide and Conquer", "Brute Force", "Greedy", "Random"]
+#list to hold options
+op = ["Divide and Conquer", "Needleman Wunsch", "Brute Force", "Greedy", "Random"]
 v = StringVar(m)
-v.set("Needleman") # default value
+v.set("Brute Force") # default value
 
 l3 = Label(m, text="Algorithm",font=("Calibri", 12))
 l3.grid(row=10, sticky=W)
@@ -217,7 +220,16 @@ def run():
     except ValueError:
         messagebox.showerror("Error", "A number was not entered or there was an empty field.")
     
+    #timer
     t0 = time.time()
+
+    #picking an algorithm to run
+    if(v.get() == "Needleman Wunsch"):
+        temp = bru.brutForce(file1, file2, score, mismatch, gap)
+        #print(bio.score)
+        t5.insert(END, temp[0])
+        t6.insert(END, temp[1])
+
     if(v.get() == "Brute Force"):
         temp = bru.brutForce(file1, file2, score, mismatch, gap)
         #print(bio.score)
