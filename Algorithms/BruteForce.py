@@ -12,22 +12,23 @@ list1 = "ATGTAGTGTATAAAGTACATGCA"
 #s2 = input('Enter a file name: ')
 list2 = "ATGTAGTACATGCA"
 
+#match = 1
+#gap = -2 # scoring for strings 
+#mismatch = -1
 
 
 
-
-def brutForce(s1, s2, match, mismatch, gap):#checks all the passible options to find the best score 
-    max = 0
+def brutForce(s1, s2, match , mismatch , gap):#checks all the passible options to find the best score 
+    max = -len(s1)
     tmp = 0
-    #match = 1
-    #gap = -2 # scoring for strings 
-    #mismatch = -1
+    
     score = 0
     temp1 = s1
     temp2 = s2
     best1 = ""
     best2 = ""
     check = 0
+    num = 0
     
 
     if(s1 == s2):#inf thy are the same 
@@ -179,15 +180,21 @@ def brutForce(s1, s2, match, mismatch, gap):#checks all the passible options to 
                         score += mismatch*j
                         i += j
                         break
+                    
+
 
         score += (len(s1)-len(s2))*gap
+      
         if(score > max):# keeps track of highest score for comapred strings 
             max = score
             best1 = s1
             best2 = s2
+          
+
         score = 0 
         s1 = temp1
         s2 = temp2
+       
 
         for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
@@ -209,15 +216,18 @@ def brutForce(s1, s2, match, mismatch, gap):#checks all the passible options to 
                         score += mismatch*j
                         i += j
                         break
+                   
 
         score += (len(s1)-len(s2))*gap
         if(score > max):# keeps track of highest score for comapred strings 
             max = score
             best1 = s1
             best2 = s2
+            print("go" , best2)
         score = 0
         s1 = temp1
         s2 = temp2
+        
 
         for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
@@ -398,6 +408,13 @@ def brutForce(s1, s2, match, mismatch, gap):#checks all the passible options to 
           s1 = temp1
           s2 = temp2
 
+
+    if(len(s1) > len(best2)):
+         num = len(s1) - len(best2)
+         for i in range( num ):
+              best2 = best2 + '-' 
+               
+
     if( check == 0):
 
             score = (len(s1))*-1
@@ -416,4 +433,9 @@ def brutForce(s1, s2, match, mismatch, gap):#checks all the passible options to 
     print(best1)
     print(best2)
     print("Score: " , max)
+
+
     return(best2, score)
+
+
+#brutForce(list1,list2, match , mismatch , gap)

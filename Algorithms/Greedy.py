@@ -12,15 +12,18 @@ list1 = "ATGTAGTGTATAAAGTACATGCA"
 #s2 = input('Enter a file name: ')
 list2 = "ATGTAGTACATGCA"
 
-list1 = "ACGTCAGGG"
-list2 = "ACGTCAGGC"
+#ist1 = "ACGTCAGGG"
+#list2 = "ACGTCAGGC"
+#match = 1
+#mismatch = -1 
+#gap = -2
 
 def Greedy(s1, s2, match , mismatch, gap):#finds the fastest soluion 
     max = 0
     tmp = 0
-    #match = 1  scoring for difference in strings
-    #gap = -2
-    #mismatch = -1
+    match = 1 # scoring for difference in strings
+    gap = -2
+    mismatch = -1
     score = 0
     temp1 = s1
     temp2 = s2
@@ -218,6 +221,12 @@ def Greedy(s1, s2, match , mismatch, gap):#finds the fastest soluion
                 s2 = temp2    
     
 
+        if(len(s1) > len(s2)):
+            num = len(s1) - len(s2)
+            for i in range( num ):
+                best2 = best2 + '-' 
+               
+
         if( check == 0):
 
             score = (len(s1))*-1
@@ -239,3 +248,5 @@ def Greedy(s1, s2, match , mismatch, gap):#finds the fastest soluion
     
     return(best2 , score)
                 
+
+#Greedy(list1,list2, match , mismatch , gap)
