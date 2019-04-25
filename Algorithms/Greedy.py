@@ -18,9 +18,9 @@ list2 = "ACGTCAGGC"
 def Greedy(s1, s2, match , mispatch, gap):#finds the fastest soluion 
     max = 0
     tmp = 0
-    match = 1 # scoring for difference in strings
-    gap = -2
-    mismatch = -1
+    #match = 1  scoring for difference in strings
+    #gap = -2
+    #mismatch = -1
     score = 0
     temp1 = s1
     temp2 = s2

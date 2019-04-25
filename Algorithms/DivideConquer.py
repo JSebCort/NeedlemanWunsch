@@ -21,13 +21,13 @@ def divide(string, devlength):
     return split
     
 
-def DivideConquer(s1, s2):# devideds up strings and compares them
+def DivideConquer(s1, s2, match, mismatch, gap):# devideds up strings and compares them
     devlength = 10
     max = 0
     tmp = 0
-    match = 1
-    gap = -2
-    mismatch = -1
+    #match = 1
+    #gap = -2
+    #mismatch = -1
     score = 0
     temp1 = s1
     temp2 = s2

@@ -16,12 +16,12 @@ list2 = "ATGTAGTACATGCA"
 
 
 
-def brutForce(s1, s2):#checks all the passible options to find the best score 
+def brutForce(s1, s2, match, mismatch, gap):#checks all the passible options to find the best score 
     max = 0
     tmp = 0
-    match = 1
-    gap = -2 # scoring for strings 
-    mismatch = -1
+    #match = 1
+    #gap = -2 # scoring for strings 
+    #mismatch = -1
     score = 0
     temp1 = s1
     temp2 = s2
