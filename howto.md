@@ -4,6 +4,8 @@ title: How-To
 ---
 # How-To Run our Needleman-Wunsch Algorithm Program
 
+### NumPy library must be installed to run Needleman-Wunsch
+
 1.	Download our folder
 2.	Run the GUI.py file
  
