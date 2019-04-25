@@ -191,7 +191,9 @@ t7.grid(row=17, sticky=N)
 #function to execute each algorithm
 def run():
 
+    t6.delete('1.0', END)
     t7.delete('1.0', END)
+
     print ("value is: " + v.get())
     
     try:  
@@ -214,7 +216,7 @@ def run():
         bru.brutForce(file1, file2, score, mismatch, gap)
         #print(bio.score)
         t5.insert(END, bru.best1)
-        t6.insert(END, bru.min)
+        t6.insert(END, bru.max)
 
     if(v.get() == "Divide and Conquer"):
         #start time
