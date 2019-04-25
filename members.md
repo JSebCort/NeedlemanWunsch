@@ -52,8 +52,6 @@ Responsibilities:
     - Dynamic Algorithm
     - Random Algorithm
     - Greedy Algorithm
-    
-# REMEMBER TO FIX THE ABOVE, EITHER GREEDY OR D&C ONLY
 
 ### Technical Writer – Sebastian Cortes
 
