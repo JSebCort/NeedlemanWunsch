@@ -1,7 +1,7 @@
 # NeedlemanWunsch
 COSC 480 - Project 2 : Needleman-Wunsch Algorithm
 
-#Folder Contents
+## Folder Contents
 - Pictures: Images used for members section of website.
 - TestCases: Text files containing strings used for test cases.
 - Images: Images used within the site, other than those in "Pictures" folder.
