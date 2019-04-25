@@ -98,5 +98,5 @@ def NeedlemanWunch(s1, s2, match, mismatch, gap):
 
     return(s1, score)
 
-NeedlemanWunch(list1, list2, match, mismatch, gap)
+
 

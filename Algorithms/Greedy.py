@@ -239,5 +239,3 @@ def Greedy(s1, s2, match , mispatch, gap):#finds the fastest soluion
     
     return(best2 , score)
                 
-
-Greedy(list1,list2)

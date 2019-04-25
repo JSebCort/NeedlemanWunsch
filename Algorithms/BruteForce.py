@@ -398,15 +398,14 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
           s1 = temp1
           s2 = temp2
 
-
-   if( check == 0):
+    if( check == 0):
 
             score = (len(s1))*-1
             print(score)
             print(s1)
             print(s2)
 
-   else:
+    else:
             score = max
             print(score)
             s2 = temp2
@@ -418,6 +417,3 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
     print(best2)
     print("Score: " , max)
     return(best2, score)
-
-
-brutForce(list1,list2)

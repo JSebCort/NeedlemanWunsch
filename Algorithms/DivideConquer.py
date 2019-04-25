@@ -181,5 +181,3 @@ def DivideConquer(s1, s2):# devideds up strings and compares them
 
                             
                         
-
-DivideConquer(s1, s2)

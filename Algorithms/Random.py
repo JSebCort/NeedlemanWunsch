@@ -118,5 +118,3 @@ def Random(s1, s2):
             print(s2)
 
     return(s2, score)
-
-Random(list1, list2)
