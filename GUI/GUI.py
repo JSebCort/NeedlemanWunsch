@@ -1,7 +1,10 @@
 from tkinter import filedialog
 from tkinter import *
 from tkinter import messagebox
-import BioProject2 as bio
+import BruteForce as b
+import DivideConquer as DV
+import Greedy as g 
+import Random as r
 import time
 
 #t0 = time.time()
@@ -98,7 +101,7 @@ b.grid(row=7, sticky=W)
 t2.grid(row=8, sticky=W)
 b2.grid(row=9, sticky=W)
 
-op = ["Needleman", "Brute Force", "Alg1", "Potato"]
+op = ["Divide and Conquer", "Brute Force", "Greedy", "Random"]
 v = StringVar(m)
 v.set("Needleman") # default value
 
@@ -208,27 +211,27 @@ def run():
     
     t0 = time.time()
     if(v.get() == "Brute Force"):
-        bio.brutForce(file1, file2, score, mismatch, gap)
+        b.brutForce(file1, file2, score, mismatch, gap)
         #print(bio.score)
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
 
-    if(v.get() == "Needleman"):
+    if(v.get() == "Divide and Conquer"):
         #start time
-        bio.NW(file1,file2,score, mismatch, gap)
+        DV.DivideConquer(file1,file2, score, mismatch, gap)
         #end time
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
-    if(v.get() == "Alg1"): 
+    if(v.get() == "Random"): 
 
         #file 1, file 1 , match, mismatch, gap
-        bio.Pointers(file1, file2,score, mismatch, gap)
+        r.Random(file1, file2, score, mismatch, gap)
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
 
-    if(v.get() == "Potato"):
+    if(v.get() == "Greedy"):
 
-        bio.Diagonal(file1, file2,score, mismatch, gap)
+        g.Greedy(file1, file2, score, mismatch, gap)
         t5.insert(END, bio.best1)
         t6.insert(END, bio.min)
 
