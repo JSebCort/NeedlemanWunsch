@@ -15,7 +15,7 @@ list2 = "ATGTAGTACATGCA"
 list1 = "ACGTCAGGG"
 list2 = "ACGTCAGGC"
 
-def Greedy(s1, s2, match , mispatch, gap):#finds the fastest soluion 
+def Greedy(s1, s2, match , mismatch, gap):#finds the fastest soluion 
     max = 0
     tmp = 0
     #match = 1  scoring for difference in strings
