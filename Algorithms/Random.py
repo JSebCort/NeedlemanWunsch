@@ -16,13 +16,13 @@ list2 = "AAAAAAAAGGGGGGGGAAA"
 #list2 = "ACGTCAGGC"
 
 
-def Random(s1, s2):    
+def Random(s1, s2, match , mismatch , gap):    
 
     min = 0
     tmp = 0
-    match = 1
-    gap = -2
-    mismatch = -1
+    #match = 1
+    #gap = -2
+    #mismatch = -1
     score = 0
     check = 0
     temp1 = s1
@@ -139,4 +139,4 @@ def Random(s1, s2):
 
     return(s2, score)
 
-Random(list1, list2)
+#Random(list1, list2)
