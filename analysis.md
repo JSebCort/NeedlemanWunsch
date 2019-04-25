@@ -4,7 +4,7 @@ title: Analysis
 ---
 # Analysis on our implementation of the Needleman-Wunsch Algorithm
 
-|     Algorithm    | Time (seconds) | Runtime(n = length of first sequence, m = length of second sequence) |           Input that lead to the correct alignment          |
+|     Algorithm    | Time (seconds) | Runtime <br> (n = length of first sequence, m = length of second sequence) |           Input that lead to the correct alignment          |
 |:----------------:|:--------------:|:--------------------------------------------------------------------:|:-----------------------------------------------------------:|
 |    Brute Force   |    0.440652    |             Best Case: O(n<sup>2</sup>) or O(nm) <br> Worst Case: O(n<sup>3</sup>)            |          AGTCTA <br> AGTTA <br> Alignment: AGT-TA <br> Score: 3          |
 | Needleman-Wunsch |    0.678185    |                                 O(nm)                                |       ATGTAGTGTATAAAGTACATGCA <br> ATGTAGTACATGCA <br> Score: -4      |
