@@ -8,21 +8,21 @@ from string import *
 
 
 #s1 = input('Enter a file name: ')
-list1 = "AAAAAAAAAAAAAAAAAAAAAAAAA"
+list1 = "AAAAAAAAAAAGGGGGGGGAAA"
 #s2 = input('Enter a file name: ')
-list2 = "GGGGGGGGGGGGGGGGGGGGGGGGG"
+list2 = "AAAAAAAAGGGGGGGGAAA"
 
 #list1 = "ACGTCAGGG"
 #list2 = "ACGTCAGGC"
 
 
-def Random(s1, s2, match, mismatch, gap):    
+def Random(s1, s2):    
 
     min = 0
     tmp = 0
-    #match = 1
-    #gap = -2
-    #mismatch = -1
+    match = 1
+    gap = -2
+    mismatch = -1
     score = 0
     check = 0
     temp1 = s1
@@ -58,12 +58,18 @@ def Random(s1, s2, match, mismatch, gap):
                             score = score + (mismatch*j)
                             num =j + i
                             break
-                         elif( temp1[i] == temp2[j+i]):
+
+                         elif(temp1[i] == temp2[i+j]):
                             score = score + (gap*j)
+                            for k in range (j):
+                                s2 = s2[:i+k] + '-' + s2[i+k:]
                             num = j + i
                             break
+                         
                          elif(temp1[j+i] == temp2[i]):
                             score = score + (gap*j)
+                            for k in range (j):
+                                s2 = s2[:i+k] + '-' + s2[i+k:]
                             num = j + i
                             break
 
@@ -73,6 +79,8 @@ def Random(s1, s2, match, mismatch, gap):
 
                          if( temp1[i] == temp2[j+i]):
                             score = score + (gap*j)
+                            for k in range (j):
+                                s2 = s2[:i+k] + '-' + s2[i+k:]
                             num = j + i
                             break
 
@@ -83,6 +91,8 @@ def Random(s1, s2, match, mismatch, gap):
                          
                          elif(temp1[j+i] == temp2[i]):
                             score = score + (gap*j)
+                            for k in range (j):
+                                s2 = s2[:i+k] + '-' + s2[i+k:]
                             num = j + i
                             break
 
@@ -92,16 +102,27 @@ def Random(s1, s2, match, mismatch, gap):
                          
                          if( temp1[i] == temp2[j+i]):
                             score = score + (gap*j)
+                            for k in range (j):
+                                s2 = s2[:i+k] + '-' + s2[i+k:]
                             num = j + i
                             break
                          elif(temp1[j+i] == temp2[i]):
                             score = score + (gap*j)
+                            for k in range (j):
+                                s2 = s2[:i+k] + '-' + s2[i+k:]
                             num = j + i
                             break
                          elif( temp1[j+i] == temp2[j+i]):
                             score = score + (mismatch*j)
                             num =j + i
                             break
+                         
+
+        if(len(s1) > len(s2)):
+            num = len(s1) - len(s2)
+            for i in range( num ):
+                s2 = s2 + '-'
+               
 
         if( check == 0):
 
@@ -113,8 +134,9 @@ def Random(s1, s2, match, mismatch, gap):
         else:
 
             print(score)
-            s2 = temp2
             print(s1)
             print(s2)
 
     return(s2, score)
+
+Random(list1, list2)
