@@ -215,7 +215,7 @@ def run():
     if(v.get() == "Brute Force"):
         bru.brutForce(file1, file2, score, mismatch, gap)
         #print(bio.score)
-        t5.insert(END, bru.best1)
+        t5.insert(END, bru.best2)
         t6.insert(END, bru.max)
 
     if(v.get() == "Divide and Conquer"):
