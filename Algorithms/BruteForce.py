@@ -12,8 +12,7 @@ list1 = "ATGTAGTGTATAAAGTACATGCA"
 #s2 = input('Enter a file name: ')
 list2 = "ATGTAGTACATGCA"
 
-list1 = "ACGTCAGGG"
-list2 = "ACGTCAGGC"
+
 
 
 
@@ -28,6 +27,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
     temp2 = s2
     best1 = ""
     best2 = ""
+    check = 0
     
 
     if(s1 == s2):#inf thy are the same 
@@ -40,6 +40,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
         for i in range(len(s1)-1):
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 tmp = score
                 for j in range ((len(s1)-i)-1):
@@ -68,6 +69,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
         for i in range(len(s1)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 tmp = score
                 for j in range ((len(s1)-i)-1):
@@ -97,6 +99,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
         for i in range(len(s1)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 tmp = score
                 for j in range ((len(s1)-i)-1):
@@ -128,6 +131,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
         for i in range(len(s1)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 tmp = score
                 for j in range ((len(s1)-i)-1):
@@ -160,6 +164,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
         for i in range(len(s2)-1):
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 for j in range ((len(s2)-i)-1):
                     
@@ -187,6 +192,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
         for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 for j in range ((len(s2)-i)-1):
 
@@ -216,6 +222,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
         for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 for j in range ((len(s2)-i)-1):
 
@@ -245,6 +252,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
         for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 for j in range ((len(s2)-i)-1):
 
@@ -278,6 +286,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
           for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 for j in range ((len(s2)-i)-1):
 
@@ -305,6 +314,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
           for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 for j in range ((len(s2)-i)-1):
 
@@ -333,6 +343,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
           for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 for j in range ((len(s2)-i)-1):
 
@@ -361,6 +372,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
           for i in range(len(s2)-1):# runs similar loops to check all possible combinations 
             if(s1[i]==s2[i]):
                 score += match
+                check = check + 1
             else:
                 for j in range ((len(s2)-i)-1):
 
@@ -386,11 +398,26 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
           s1 = temp1
           s2 = temp2
 
+
+   if( check == 0):
+
+            score = (len(s1))*-1
+            print(score)
+            print(s1)
+            print(s2)
+
+   else:
+            score = max
+            print(score)
+            s2 = temp2
+            print(best1)
+            print(best2)
                    
     print("brutforce")
     print(best1)
     print(best2)
     print("Score: " , max)
+    return(best2, score)
 
 
 brutForce(list1,list2)
