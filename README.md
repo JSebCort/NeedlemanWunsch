@@ -1,6 +1,8 @@
 # NeedlemanWunsch
 COSC 480 - Project 2 : Needleman-Wunsch Algorithm
 
+Group Members: Sebastian Cortes, Christopher Brown, Whitney Trovinger, Andrew March, Jennifer Mince, Edmund Sherman.
+
 ## Folder Contents
 - Final Code: All the code needed to be downloaded to run our programs.
 
