@@ -2,7 +2,7 @@
 layout: default
 title: Analysis
 ---
-# Analysis on our implementation of the Needleman-Wunsch Algorithm
+# Analysis on our implementation of algorithms
 
 |     Algorithm    | Time (seconds) | Runtime <br> (n = length of first sequence, m = length of second sequence) |           Input that lead to the correct alignment          |
 |:----------------:|:--------------:|:--------------------------------------------------------------------:|:-----------------------------------------------------------:|
