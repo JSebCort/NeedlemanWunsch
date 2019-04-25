@@ -44,14 +44,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                 tmp = score
                 for j in range ((len(s1)-i)-1):
 
-                    if(s1[i]==s2[i+j]):# checks for gaps
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
-
-                    elif(s1[i+j]==s2[i]):# checks for gaps
+                    if(s1[i+j]==s2[i]):# checks for gaps
                         score += gap*j
                         for k in range (j):
                             s2 = s2[:i+k] + '-' + s2[i+k:]
@@ -86,13 +79,6 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         i += j
                         break
 
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
-
                     elif(s1[i+j]==s2[i+j]):
                         score += mismatch*j
                         i += j
@@ -127,12 +113,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         i += j
                         break
 
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
+                   
                 if(tmp == score):
                     score = mismatch*(len(s1)-i)
         
@@ -155,13 +136,6 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         score += mismatch*j
                         i += j
                         break 
-
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break    
                     
                     elif(s1[i+j]==s2[i]):
                         score += gap*j
@@ -188,15 +162,8 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                 score += match
             else:
                 for j in range ((len(s2)-i)-1):
-
-                    if(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
-
-                    elif(s1[i+j]==s2[i]):
+                    
+                    if(s1[i+j]==s2[i]):
                         score += gap*j
                         for k in range (j):
                             s2 = s2[:i+k] + '-' + s2[i+k:]
@@ -230,12 +197,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         i += j
                         break
 
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
+                    
 
                     elif(s1[i+j]==s2[i+j]):
                         score += mismatch*j
@@ -269,12 +231,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         i += j
                         break
 
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
+                    
 
         score += (len(s1)-len(s2))*gap
         if(score > max ):# keeps track of highest score for comapred strings 
@@ -296,12 +253,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         i += j
                         break 
 
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break    
+                  
                     
                     elif(s1[i+j]==s2[i]):
                         score += gap*j
@@ -329,14 +281,8 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
             else:
                 for j in range ((len(s2)-i)-1):
 
-                    if(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
-
-                    elif(s1[i+j]==s2[i]):
+                   
+                    if(s1[i+j]==s2[i]):
                         score += gap*j
                         for k in range (j):
                             s2 = s2[:i+k] + '-' + s2[i+k:]
@@ -369,12 +315,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         i += j
                         break
 
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
+                   
 
                     elif(s1[i+j]==s2[i+j]):
                         score += mismatch*j
@@ -407,12 +348,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         i += j
                         break
 
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break
+                   
           score += (len(s2)-len(s1))*gap
           if(score > max):# keeps track of highest score for comapred strings 
             max = score
@@ -433,12 +369,7 @@ def brutForce(s1, s2):#checks all the passible options to find the best score
                         i += j
                         break 
 
-                    elif(s1[i]==s2[i+j]):
-                        score += gap*j
-                        for k in range (j):
-                            s1 = s1[:i+k] + '-' + s1[i+k:]
-                        i += j
-                        break    
+                  
                     
                     elif(s1[i+j]==s2[i]):
                         score += gap*j
