@@ -160,13 +160,13 @@ def Greedy(s1, s2, match , mismatch, gap):#finds the fastest soluion
 
 
         else:
-                for i in range(len(s2)):
+                for i in range(len(s2)-1):
                     if(s1[i]==s2[i]):# if characters match add 1 to match 
                           score += match
                           check = check + 1
                     else:# if they dont match check what else is there
                         tmp = score
-                        for j in range ((len(s2)-i)):
+                        for j in range ((len(s2)-i-1)):
 
                             if(s1[i+j]==s2[i+j]):#misMatches 
                                 score += mismatch*j
@@ -185,7 +185,7 @@ def Greedy(s1, s2, match , mismatch, gap):#finds the fastest soluion
                 s1 = temp1
                 s2 = temp2
                 
-                for j in range ((len(s2)-i)):
+                for j in range ((len(s2)-i-1)):
                     if(s1[i]==s2[i+j]):# checks for gaps
                         score += gap*j
                         for k in range (j):
