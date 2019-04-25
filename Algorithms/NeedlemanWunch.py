@@ -1,3 +1,8 @@
+# coding: utf-8
+
+# In[6]:
+
+
 import re
 import collections
 import csv
@@ -15,8 +20,6 @@ match = 1
 mismatch = -1
 gap = -2
 
-Zeros = [len(s1)][len(s2)]
-Matrix = [len(s1)][len(s2)]
 
 def Diagonal(n1,n2,pt):
     if(n1 == n2):
@@ -39,7 +42,8 @@ def Pointers(di,ho,ve):
 
 
 
-def NeedlemanWunch(s1,s2,match ,mismatch , gap ):
+def NeedlemanWunch(s1, s2, match, mismatch, gap):
+    print("here")
     penalty = {'MATCH': match, 'MISMATCH': mismatch, 'GAP': gap} #A dictionary for all the penalty valuse.
     n = len(s1) + 1 #The dimension of the matrix columns.
     m = len(s2) + 1 #The dimension of the matrix rows.
@@ -92,11 +96,7 @@ def NeedlemanWunch(s1,s2,match ,mismatch , gap ):
     score = al_mat[m-1][n-1]
     print(score)
 
-    return(s2 , score)
+    return(s1, score)
 
 NeedlemanWunch(list1, list2, match, mismatch, gap)
-
-
-
-
 
