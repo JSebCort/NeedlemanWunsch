@@ -6,7 +6,7 @@ title: How-To
 
 ### Note: NumPy library must be installed to run Needleman-Wunsch
 
-1.	Download our folder
+1.	Download our 'FinalCode' folder
 2.	Run the GUI.py file
  
 ![Picture](Images/image1.png)
