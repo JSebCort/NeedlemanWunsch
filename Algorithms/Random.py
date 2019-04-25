@@ -35,7 +35,7 @@ def Random(s1, s2):
     if(s1 == s2):
         print(s1)
         print(s2)
-        print("score" + len(s1))
+        print("score: " + Str(len(s1)))
         
 
     else:
