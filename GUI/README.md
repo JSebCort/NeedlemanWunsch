@@ -1,7 +1,17 @@
-GUI readme
+4/25/2019
 
-GUI parsing is simple, if its an AGTC then we add it, if not, we add a dash as a placeholder. I was not sure if I should delete it or not. 
+Welcome. 
 
-Output shows score and suppose to show difference but the algorithms do not output differences. 
+To start the program, download the Algorithms files and GUI.py. 
 
-My GUI works with the version of code I've uploaded with my GUI. 
+Run the GUI.py file. It is important to have numpy installed. 
+
+On the left-hand side there are options to import two files for comparison,
+choose which algorithm to run, and the scoring system. There are defaults 
+already in place, but are changable. 
+
+When ready, hit "Run". 
+
+The files chosen will appear in the respective textboxes. 
+The output will appear just below with a timer on how
+long the algorithm took to run and score of the sequence. 
