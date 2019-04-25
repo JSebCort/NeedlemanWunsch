@@ -1,3 +1,6 @@
+#GUI for Algorithms. Whitney Trovinger. 
+#import statements 
+
 from tkinter import filedialog
 from tkinter import *
 from tkinter import messagebox
@@ -28,13 +31,14 @@ file2 = ""
 file_temp = "" 
 file_temp2 = "" 
 
+#button to get file 
 def callback():
 
     t.delete('1.0', END)
     textshow1.delete('1.0', END)
 
     global file1 
-    global file2 
+
 
     m.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select File One",filetypes = (("txt files","*.txt"),("all files","*.*")))
     
@@ -53,12 +57,14 @@ def callback():
 
     
     
-
+#button to get files
 def callback1():
     m.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select File Two",filetypes = (("txt files","*.txt"),("all files","*.*")))
     
     t2.delete('1.0', END)
     textshow2.delete('1.0', END)
+
+    global file2 
 
     t2.insert(END, m.filename)
     
@@ -119,7 +125,7 @@ l4.grid(row=13, sticky=W)
 
 t3 = Text(m, height=1, width=8)
 t3.grid(row=14, sticky=W)
-t3.insert('1.0', '5')
+t3.insert('1.0', '1')
 
 #label 5
 l5 = Label(m, text="Mismatch:")
@@ -213,29 +219,27 @@ def run():
     
     t0 = time.time()
     if(v.get() == "Brute Force"):
-        bru.brutForce(file1, file2, score, mismatch, gap)
+        temp = bru.brutForce(file1, file2, score, mismatch, gap)
         #print(bio.score)
-        t5.insert(END, bru.best2)
-        t6.insert(END, bru.max)
+        t5.insert(END, temp[0])
+        t6.insert(END, temp[1])
 
     if(v.get() == "Divide and Conquer"):
-        #start time
-        DV.DivideConquer(file1,file2, score, mismatch, gap)
-        #end time
-        t5.insert(END, DV.best1)
-        t6.insert(END, DV.min)
+        temp = DV.DivideConquer(file1,file2, score, mismatch, gap)
+        t5.insert(END, temp[0])
+        t6.insert(END, temp[1])
     if(v.get() == "Random"): 
 
         #file 1, file 1 , match, mismatch, gap
-        r.Random(file1, file2, score, mismatch, gap)
-        t5.insert(END, r.best1)
-        t6.insert(END, r.min)
+        temp = r.Random(file1, file2, score, mismatch, gap)
+        t5.insert(END, temp[0])
+        t6.insert(END, temp[1])
 
     if(v.get() == "Greedy"):
 
-        g.Greedy(file1, file2, score, mismatch, gap)
-        t5.insert(END, g.best1)
-        t6.insert(END, g.max)
+        temp = g.Greedy(file1, file2, score, mismatch, gap)
+        t5.insert(END, temp[0])
+        t6.insert(END, temp[1])
 
     t1 = time.time()
     total = t1-t0
