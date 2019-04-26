@@ -7,6 +7,8 @@ Group Members: Sebastian Cortes, Christopher Brown, Whitney Trovinger, Andrew Ma
 
 GUI must be resized manually on Mac computers to show the 'Run' button.
 
+Presentation slides under "Documentation" folder.
+
 ## Folder Contents
 - Final Code: All the code needed to be downloaded to run our programs.
 
@@ -14,5 +16,5 @@ GUI must be resized manually on Mac computers to show the 'Run' button.
 - TestCases: Text files containing strings used for test cases.
 - Images: Images used within the site, other than those in "Pictures" folder.
 - GUI: Files used to create the GUI and its logic.
-- Documentation: Any material that helps in understanding our project. Such documents include a How-To document and test case information.
+- Documentation: Any material that helps in understanding our project. Such documents include a How-To document, test case information and presentation slides.
 - Algorithms: Files containing the logic of all our algorithms.
